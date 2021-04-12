@@ -1,0 +1,4 @@
+
+emhar_user:
+    resource: ../vendor/emhar/user-bundle/Controller/
+    type: annotation

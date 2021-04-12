@@ -1,0 +1,17 @@
+{% extends 'base.html.twig'%}
+ {% block body %}
+<ul>{% for article in articles %}
+<li><a href="{{ path('article',{
+            'articleId': article.id,
+            'categoryId': article.category.id
+             }) 
+        }}">
+        {% if article.important %}
+        <p> {{ article.title|e }} , important</p>
+        {% else %}
+         <p> {{ article.title|e }}</p>
+        {% endif %}
+</a>
+</li>
+{% endfor%}</ul> 
+{% endblock %}

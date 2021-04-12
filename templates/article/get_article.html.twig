@@ -1,0 +1,13 @@
+{% extends 'base.html.twig'%}
+ {% block body %}
+<h1>{{article.title}}</h1>
+<p>{{article.content}}</p>
+<img src="">
+<a href="{{path('article', {
+    categoryId: article.category.id,
+    articleId: article.id
+}) }}"> </a>
+
+{% endblock %}
+
+
